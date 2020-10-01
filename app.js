@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 let signup = require('./routes/signup');
 //let getUsr = require('./routes/getUsr');
 let login = require('./routes/login');
+let getShopCart = require('./routes/getShopCart');
 const shutDown = require('./shutdown');
 
 //middlewares
@@ -19,6 +20,7 @@ app.use(express.json());
 app.use('/signup', signup);
 //app.use('/get', getUsr);
 app.use('/login',login);
+app.use('/getShopCart', getShopCart);
 
 //database
 mongoose.connect(process.env.MONGODB_URI,{ useNewUrlParser: true, useUnifiedTopology: true  },() => { console.log('Connected to DB.') });
