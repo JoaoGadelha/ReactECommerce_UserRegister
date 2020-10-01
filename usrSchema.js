@@ -9,13 +9,12 @@ const usrSchema = mongoose.Schema({
         type: Number,
         required: true
     },
-    password2: {
-        type: Number,
-        required: true
-    },
     email: {
         type: String,
         required: true
+    },
+    shopCart: {
+        type: Array
     }
 });
 
