@@ -5,7 +5,7 @@ let User = require('../usrSchema.js');
 getShopCart.post('/:id', async (req, res) => {
     try {
         let shopCart = await User.find({ _id: req.params.id });
-        return res.json({shopCart:shopCart[0]._id});
+        return res.json({shopCart:shopCart[0].shopCart});
     } catch (err) {
         res.json({ message: err });
     }
