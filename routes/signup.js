@@ -24,7 +24,7 @@ signup.post('/', async (req, res) => {
     
     try {
         let newUsr = await usr.save();
-        return res.json(newUsr);
+        return res.json({message:'success'});
     } catch (err) {
         res.json({ message: err });
     }
