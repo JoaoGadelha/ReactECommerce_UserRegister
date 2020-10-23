@@ -24,10 +24,11 @@ signup.post('/', async (req, res) => {
     
     try {
         let newUsr = await usr.save();
-        return res.json({message:'success'});
+        return res.json({message:'success', userId:newUsr._id});
     } catch (err) {
-        res.json({ message: err });
+        return res.json({message:err});
     }
+    
 })
 
 module.exports = signup;
