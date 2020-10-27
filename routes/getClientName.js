@@ -5,7 +5,7 @@ let User = require('../usrSchema.js');
 getClientName.post('/:id', async (req, res) => {
     try {
         let clientName = await User.find({ _id: req.params.id });
-        return res.json({shopCart:shopCart[0].name});
+        return res.json({clientName:clientName[0].name});
     } catch (err) {
         res.json({ message: err });
     }
